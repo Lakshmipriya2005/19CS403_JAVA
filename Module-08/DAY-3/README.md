@@ -1,47 +1,45 @@
-# Ex.No:8(C)             FILTER READER
-## AIM:
- To create a java Program to read the content from the file by using Filter Reader 
+# Ex.No:8(D) BUFFER INPUT/OUTPUT STREAM
 
+## AIM:
+ To create a java program file for displaying the data from the file using FileOutputStream & BufferedOutputStream.
 
 ## ALGORITHM :
-1.  Start the Program
-2.  Define CustomFilterReader1, extending FilterReader, and override the read() method to replace spaces with $ while reading.
-2.	In main(), create a FileOutputStream and a FilterOutputStream to write "India is my country" to a file named javaFile123.txt.
-3.	Write the string to the file using filter.write(), then close the FilterOutputStream.
-4.	Create a FileReader to read from javaFile123.txt, and wrap it with CustomFilterReader1.
-5.	Read and print each character, where spaces are replaced with $, until the end of the file.
-6.	Close CustomFilterReader1 and FileReader to free resources
-
+1.	Import java.io.* and java.util.* for file handling and user input.
+2.	Create a file named sample.txt and write "This is a line of text inside the file." using FileWriter.
+3.	Close the FileWriter to save the content to sample.txt.
+4.	Open sample.txt with a FileOutputStream wrapped in a BufferedOutputStream for efficient reading.
+5.	Prompt the user to enter the number of bytes to skip using Scanner.
+6.	Skip the specified number of bytes in the file and print the remaining content.
+7.	Close the BufferedOutputStream and FileOutputStream to release system resources.
 
 ## PROGRAM:
  ```
-/*
-Program to implement a Filter Reader using Java
-Developed by: 
-RegisterNumber:  
-*/
+
+Program to implement a Buffer Input/Output Stream using Java
+Developed by: LAKSHMIPRIYA D
+RegisterNumber: 212222040085
+
 ```
 
 ## Sourcecode.java:
-
-
-
-
-
-
+```java
+       
+           FileOutputStream fout=new FileOutputStream("sample.txt");    
+     BufferedOutputStream bout=new BufferedOutputStream(fout);  
+     Scanner sc=new Scanner(System.in);
+     String s=sc.nextLine();    
+     byte b[]=s.getBytes();    
+     bout.write(b);    
+    
+     bout.close();    
+     fout.close();    
+       
+```
 
 ## OUTPUT:
 
+![image](https://github.com/user-attachments/assets/249c696d-5936-4ddd-ba15-dc014fa0e3ef)
 
 
 ## RESULT:
-Thus the java Program to read the content from the file by using Filter Reader  was executed and verified successfully.
-
-
-
-
-
-
-
-
-
+Thus, the java program file for displaying the data from the file using FileInputStream & BufferedInputStream was executed and done successfully.
